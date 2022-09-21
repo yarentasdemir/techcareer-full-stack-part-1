@@ -1,0 +1,33 @@
+header {
+  display: flex;
+  justify-content: center;
+}
+
+p {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.container p {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+} /*# sourceMappingURL=content.css.map */
+.container div {
+  width: 200px;
+  height: 200px;
+  border: solid;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.container ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+footer {
+  font-size: 45px;
+}/*# sourceMappingURL=style.css.map */

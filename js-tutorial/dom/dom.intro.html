@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+</head>
+<body>
+
+    <div>
+        <p id="title">Türkiye</p>
+
+        <button onclick="changeCountry()">Change Country</button>
+        <button onclick="changeColor()">Change Color</button>
+    </div>
+
+    <span>Hello</span>
+    <span>Hello-2</span>
+    <span>Hello-3</span>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur odio non magnam, distinctio architecto ab
+        dolore, veniam repellendus aliquid quibusdam illo atque perspiciatis deserunt quam illum ut, eveniet aperiam
+        rem!</p>
+</body>
+<script>
+
+//ekrandaki spanı yakala
+var span = document.getElementsByTagName("span");
+
+  var countryP = document.getElementById('title');
+
+  
+  
+  function changeCountry() {
+        
+        var countryP = document.getElementById('title');
+
+       //countryP.innerHTML = "Turkey"; alttakiyle aynı,ikisi de kullanılabilir.
+        countryP.innerText = "Turkey"
+
+    }
+
+    
+    
+    
+    function changeColor(){
+
+var countryP = document.getElementById('title');
+
+countryP.style.color = 'tomato';
+
+}
+
+</script>
+
+</html>

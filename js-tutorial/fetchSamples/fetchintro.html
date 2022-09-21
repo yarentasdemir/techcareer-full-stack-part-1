@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+</head>
+<body>
+
+</body>
+<script>
+  
+  
+  //Asenkron bir kod varsa bu 'then' ile yakalanır.
+  // response.json fonksiyonu ile gelen response un body kısmını okuruz.
+  //ve okunan değeri bir alt fonksiyona fırlatırız.
+  fetch("https://northwind.vercel.app/api/suppliers")
+  .then((response) => response.json())
+  .then(data => {
+
+    console.log('DATA', data);
+  })
+
+
+ // fetch metodu default olarak GET isteği yapar.
+</script>
+
+</html>

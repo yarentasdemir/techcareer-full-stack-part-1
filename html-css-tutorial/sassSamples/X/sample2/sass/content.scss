@@ -1,0 +1,29 @@
+p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.container p {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  }/*# sourceMappingURL=content.css.map */
+  
+
+
+  .container div{
+    width: 200px;
+    height: 200px;
+    border: solid;
+  }
+   
+  @mixin flexDesign {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .container{
+     @include flexDesign()
+  }
+
+  .container ul{
+    @include flexDesign()
+  }

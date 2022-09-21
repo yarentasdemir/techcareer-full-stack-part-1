@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+</head>
+<body>
+
+    <div>
+        <label>City:</label>
+        <input type="text" id="cityName" />
+    </div>
+    <div>
+        <button onclick="add()">Add</button>
+    </div>
+
+    <ul id="cities">
+        <li>İstanbul</li>
+    </ul>
+</body>
+<script>
+
+ function add(){
+
+//Öncelikle inputtaki değeri bir değişkene atıyorum.
+var cityName = document.getElementById('cityName').value;
+ console.log('cityName', cityName);
+
+ 
+
+
+
+  //Öncelikle bir li tag oluşturuyorum.
+  var liElement = document.createElement('li');
+        liElement.innerText = cityName;
+
+
+        var ulElement = document.getElementById('cities');
+        ulElement.appendChild(liElement);
+
+
+        //butona bastıktan sonra kutu boşalsın istiyorsam:
+        document.getElementById('cityName').value = '';
+    }
+</script>
+
+</html>

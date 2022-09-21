@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="buttons">
+
+    </div>
+
+    <button id="btn">Click Me!</button>
+</body>
+<script>
+
+//click me ye tıkladığımda üste düşecek.
+document.getElementById('btn').addEventListener('click', function () {
+
+alert('Click Me!')
+
+})
+
+//bir for döngüsü ile 10 tane buton oluşsun ve div içerisine eklensin. Her butona fordaki index no verilsin. Hangi butona tıklarsam onun index numarası yazsın!
+
+for(let i = 0; i < 10; i++){
+
+let btn = document.createElement('button');
+btn.innerHTML = i;
+// hangi butona tıklarsam adı ekrana yazsın istiyorsam:
+btn.addEventListener('click', function(e) {
+         
+            console.log('this', this.innerHTML);
+        })
+
+document.getElementById('buttons').appendChild(btn);
+
+}
+
+</script>
+
+</html>

@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+</head>
+<body>
+
+</body>
+<script>
+// Java da liste yerine array methodlar vardır.
+
+
+
+var cities = ['İzmir', 'İstanbul', 'Ankara'];
+     //MEVCUT diziye yeni bir eleman eklemek için:
+     cities.push('Diyarbakır');
+    console.log('Cities', cities);
+ 
+
+
+        //Dizideki ilk elemanı ver:
+        console.log('First: ', cities[0]);
+
+
+       
+
+     //spread keyword (cities de ki tüm elemanları sonrasında da Aydını basar.)
+    var newCities = [...cities, 'Aydın'];
+    var newCities2 = ['Van', ...cities, 'Muğla'];
+
+
+   
+    //***SPLICE metodu ile, belirtilen indexten belirtilen uzunlukta değeri silebilirim.
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    fruits.splice(0,1);
+    console.log('SPLICE', fruits);
+
+
+
+     
+    //**SLICE metodu ile başlangıç ve bitiş indexi veriyorum. Başlangıç index dahil bitiş hariç değerleri bana veriyor.(Genelde metodlarda başlangıç dahil, bitiş hariçtir.)
+    // 0 dan başlayıp 1 adetini bana ver:
+    const names = ['Çağatay', 'Mustafa', 'Şeyma', 'Harun', 'Elif'];
+    console.log("SLICE", names.slice(0,1))
+
+
+
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+</head>
+<body>
+
+</body>
+<script>
+//string metotlar string değerler üzerine yapışık metodlarım:
+ 
+var name = "yağmur";
+
+// yağmur ismini YAĞMUR şeklinde yazdırmak için:
+
+console.log('UPPER CASE: ', name.toUpperCase());
+
+//YAğmur ismini yağmur şeklinde yazdırmak için:
+
+console.log('LOWER CASE', name.toLowerCase());
+
+//name değişkeninin uzunluğunu bana ver:
+
+console.log('Lenght', name.lenght);
+
+// Slice metodu belirlediğimiz indexten gideceği indexe kadar olan parçayı bana verir.
+//2. indexten başlar 4. indexe kadar olan parçayı alır .
+var result = name.slice(2,4);
+console.log('SLICE', result);
+
+
+
+
+var result2= name.replace("ğ","x"); // ğ harfini x ile değiştirir.
+console.log('REPLACE', result2);
+
+
+
+var phoneNumber = "+905344248230"
+// yukarıda ki numaradan +90 kısmını çıkartmak için;
+var phoneResult= phoneNumber.slice(3);
+console.log('phoneResult', phoneResult);
+
+var phoneResult2 = phoneNumber.replace("+90","");
+console.log('phoneResult2', phoneResult2);
+
+// Concat methodu:birleştirmek. ( yağmur ve taşdemiri birleştirdi.)
+var surname = "Taşdemir";
+
+var fullName = name.concat(" ", surname);
+console.log('FULL NAME', fullName);
+
+
+//Trim: boşluk yapmak için.
+console.log(' TRIM', name.trim());
+
+// indexi 3 olan harfi ekrana yazdırmak için:
+console.log('Index-3', name[3]);
+
+
+</script>
+
+</html>

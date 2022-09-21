@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+
+            margin: 0px;
+        }                   /* headerı satırın tümüne yaydı */
+        
+         header {
+            height: 104px;
+            background-color: #2C3D4F;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;   /* headırda ki yazıları ortaladık (diklemesine işlem yapar)*/
+            padding-left: 60px;
+            padding-right: 60px;
+         }
+
+         .logo{
+
+            color:#fff;
+            font-size: 1.7em;  /* logonun yazı tipini yazdık.  */
+            font-weight: 700;
+        }
+
+         .navbar-collapse{
+
+         }
+
+         .navbar-collapse a{
+            color:#fff;
+        }
+         
+        .navbar-collapse ul{
+            display: flex;     /*yan yana almak için */
+            list-style-type: none; /* noktaları kaldırmak için*/
+            margin: 0;
+            padding: 0;
+            gap: 30px;
+        }
+
+        .navbar-collapse a{
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;  /* fontun kalınlığını verdik.*/
+        }
+
+        .navbar-collapse a:hover{   /*Üstüne geldiğinde renk değişikliği için*/
+           color: #1abc9c;
+        }
+
+        li{
+            margin-left: 20px;   /*  Başlıkların ( p.a.c. nin) aralarını açtı*/
+        }
+
+        
+         /*li:not(:first-child){
+            margin-left: 20px;       birinci hariç diğerlerinin arasını açar   
+        }   
+        */
+        
+        
+    </style>
+</head>
+<body>
+    
+     <header>
+
+         <div class="logo">
+
+        <a>Star Bootstrap</a>
+         </div>
+
+         <div class="navbar-collapse">
+            <ul>
+                <li><a href="">Portfolio</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+         </div>
+     </header>
+    
+</body>
+</html>
