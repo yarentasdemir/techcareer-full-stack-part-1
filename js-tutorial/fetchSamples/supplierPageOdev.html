@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <button onclick="getProducts()">Get Suppliers</button>
+    </div>
+    <div style="display: flex">
+        <h1>Supplier Count: </h1><h1 id="supplierCount"></h1>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Customer Id</th>
+                <th>Employee Id</th>
+                <th>Order Date</th>
+                <th>Required Date</th>
+                <th>Shipped Date</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+
+
+    </table>
+
+</body>
+<script>
+
+    function getProducts() {
+
+        document.querySelector('tbody').innerHTML = "";
+
+
+        //fetch metodu dışarıdan tek parametre aldığı takdirde default bir GET isteği atacaktır.
+        fetch("https://northwind.vercel.app/api/orders")
+            .then(res => res.json())
+            .then(data => {
+                document.getElementById('supplierCount').innerHTML = data.length
+                data.forEach(element => {
+
+                    var trElement = document.createElement('tr');
+
+                    var tdId = document.createElement('td');
+                    tdId.innerText = element.id;
+                    
+
+                    var tdCustomerId = document.createElement('td');
+                    tdCustomerId.innerText = element.customerId;
+
+                    var tdEmployeeId = document.createElement('td');
+                    tdEmployeeId.innerText = element.employeeId;
+
+                    var tdOrderDate = document.createElement('td');
+                    tdOrderDate.innerText = element.orderDate;
+
+                    var tdRequiredDate = document.createElement('td');
+                    tdRequiredDate.innerText = element.requiredDate;
+    
+                    var tdShippedDate = document.createElement('td');
+                    tdShippedDate.innerText = element.shippedDate;
+
+                       
+                      var tdDelete = document.createElement('td');
+                    tdDelete.innerHTML = 'DELETE'
+                    tdDelete.style.cursor = 'pointer'
+                    tdDelete.style.color = 'pink';
+                    tdDelete.id = element.id;
+
+                    tdDelete.addEventListener('click', function (e) {
+                        // silenecek ıd:
+                        let deleteId = e.target.id;
+
+                        fetch("https://northwind.vercel.app/api/orders/" + deleteId, {
+                            method: 'DELETE'
+                        })
+                        .then(res => {
+                            if(res.status == 200){
+                                getProducts();
+                            }
+                        })
+
+
+                    })
+
+                    trElement.appendChild(tdId);
+                    trElement.appendChild(tdCustomerId);
+                    trElement.appendChild(tdEmployeeId);
+                    trElement.appendChild(tdOrderDate);
+                    trElement.appendChild(tdRequiredDate);
+                    trElement.appendChild(tdShippedDate);
+                    trElement.appendChild(tdDelete);
+
+
+                    document.getElementsByTagName('tbody')[0].appendChild(trElement);
+
+
+                });
+
+            })
+
+ 
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+          
+
+            background:url(cim2.jpg)no-repeat ;
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat ;
+            background-size:cover;
+
+        }
+
+        img {
+            width: 300px;
+            height: 120px;
+            position: relative;
+            left: 10;
+        }
+
+        .vr {
+          border-left: 5px solid #fa0000;
+          height: 700px;
+          position: absolute;
+          left: 90%;
+          margin-left: -3px;
+          top: 0;
+}
+
+
+
+
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <div class="vr"></div>
+    </div>
+    
+   
+    <div>
+        <img id="at1" 
+        src="https://n11scdn.akamaized.net/a1/org/kitap-muzik-film-oyun/500-parca-puzzle/trefl-dortnala-kosan-at-500-parca-puzzle__1575115264967052.jpg"
+         alt="">
+    </div>
+
+    <div>
+        <img id="at2"
+            src="https://st.depositphotos.com/1003660/1320/i/600/depositphotos_13209060-stock-photo-beautiful-black-horse-running-gallop.jpg"
+            alt="">
+    </div>
+
+    <div>
+        <img id="at3"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREKv-q5BlrPO42A84nLMfNwK2W4SkQkOrt6Q&usqp=CAU.jpg"
+            alt="">
+    </div>
+
+
+    <div>
+        <button onclick="start()">Start</button>
+    </div>
+
+
+
+
+</body>
+
+
+<script>
+
+
+
+    let left1 = 10;
+    let left2 = 10;
+    let left3 = 10;
+
+    
+    function start() {
+
+        var audio = new Audio('horse.mp3');
+        audio.play();
+
+     
+        setInterval(() => {
+
+            //her 500 milisaniye ATA rastgele bir sayı atayalım
+            randomNumber1 = Math.floor(Math.random() * 200);
+            left1 = left1 + randomNumber1;
+
+            let at1 = document.getElementById('at1');
+            at1.style.left = left1 + "px";
+
+
+            randomNumber2 = Math.floor(Math.random() * 200);
+            left2 = left2 + randomNumber2;
+
+            let at2 = document.getElementById('at2');
+            at2.style.left = left2 + "px";
+
+            
+
+
+            randomNumber3 = Math.floor(Math.random() * 200);
+            left3 = left3 + randomNumber3;
+
+            let at3 = document.getElementById('at3');
+            at3.style.left = left3 + "px";
+
+
+        }, 900);
+
+    }
+ 
+        
+
+</script>
+
+</html>
